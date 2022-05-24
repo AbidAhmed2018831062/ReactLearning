@@ -1,19 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Post()
 {
+    let activeClass={
+        textDecoration:"none",
+        color:"red"
+
+    }
 return(
     <div>
         <ul>
             <li>
-                <Link to="/posts/1">Post 1</Link>
+                <NavLink className={(info)=> info.isActive?activeClass:""}to="/posts/1">Post 1</NavLink>
             </li>
             <li>
-                <Link to="/posts/2">Post 2</Link>
+                <NavLink className={(info)=> info.isActive?activeClass:""} to="/posts/2">Post 2</NavLink>
             </li>
             <li>
-                <Link to="/posts/3">Post 3</Link>
+                <NavLink className={(info)=> info.isActive?activeClass:""} to="/posts/3">Post 3</NavLink>
             </li>
         </ul>
     </div>
