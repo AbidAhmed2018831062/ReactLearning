@@ -3,11 +3,14 @@ import { NavLink } from 'react-router-dom';
 
 function Post()
 {
+    
     let activeClass={
         textDecoration:"none",
         color:"red"
 
     }
+
+   
 return(
     <div>
         <ul>
@@ -21,6 +24,7 @@ return(
                 <NavLink className={(info)=> info.isActive?activeClass:""} to="/posts/3">Post 3</NavLink>
             </li>
         </ul>
+      
     </div>
 )
 }
